@@ -1,0 +1,23 @@
+{
+  "name": "mui-editable-table-demo",
+  "version": "0.1.1",
+  "description": "Demo of mui-editable-table",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --config webpack-dev-server.config.js --progress --inline --colors"
+  },
+  "dependencies": {
+    "browserify-fs": "^1.0.0",
+    "jquery": "^3.1.1",
+    "material-ui": "^0.16.4",
+    "mui-editable-table": "^0.3.1",
+    "react": "15.3.2",
+    "react-dom": "^15.4.0",
+    "react-tap-event-plugin": "^2.0.1"
+  },
+  "devDependencies": {
+    "transfer-webpack-plugin": "^0.1.4",
+    "webpack": "^1.13.3",
+    "webpack-dev-server": "^1.16.2"
+  }
+}
