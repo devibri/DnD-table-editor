@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 import MuiEditableTable from "mui-editable-table";
+import {Link } from "react-router-dom";
 
-class Demo extends Component {
+class CharacterEditor extends Component {
 
   render() {
       const shouldBeReadOnly = function(rowData) {
@@ -219,6 +220,9 @@ class Demo extends Component {
       };
 
       return (
+       <div>
+            <Link to="/LocationEditor"><button>Location Editor</button></Link>
+        
       <MuiThemeProvider>
           <MuiEditableTable
               colSpec={colSpec}
@@ -227,8 +231,10 @@ class Demo extends Component {
               reorderable={true}
           />
       </MuiThemeProvider>
+      </div>
+
     );
   }
 }
 
-export default Demo;
+export default CharacterEditor;
