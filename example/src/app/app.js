@@ -5,6 +5,8 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import injectTapEventPlugin from 'react-tap-event-plugin';
 import CharacterEditor from './CharacterEditor'; // Our custom react component
 import LocationEditor from './LocationEditor';
+import Navigation from './Navigation';
+let cast = require('cast.json');
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941
@@ -17,11 +19,15 @@ injectTapEventPlugin();
 
  const rootElement = document.getElementById("app");
     ReactDOM.render(
-      <BrowserRouter>
-       <Switch>
-        <Route exact path="/" component={CharacterEditor} />
-        <Route path="/LocationEditor" component={LocationEditor} />
-      </Switch>
+    	<BrowserRouter>
+        <div>
+          <Navigation />
+            <Switch>
+             <Route path="/" component={CharacterEditor} exact/>
+             <Route path="/LocationEditor" component={LocationEditor}/>
+            <Route component={Error}/>
+           </Switch>
+        </div> 
       </BrowserRouter>,
       rootElement
     );

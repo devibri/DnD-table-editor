@@ -8,12 +8,15 @@
   },
   "dependencies": {
     "@material-ui/core": "^4.11.1",
+    "bootstrap": "^4.5.3",
     "browserify-fs": "^1.0.0",
     "jquery": "^3.1.1",
     "material-ui": "^0.16.4",
     "mui-editable-table": "^0.3.1",
-    "react": "15.3.2",
-    "react-dom": "^15.4.0",
+    "react": "^15.7.0",
+    "react-bootstrap": "^0.31.5",
+    "react-dom": "^15.7.0",
+    "react-redux": "^5.0.5",
     "react-router-dom": "^5.2.0",
     "react-tap-event-plugin": "^2.0.1"
   },
