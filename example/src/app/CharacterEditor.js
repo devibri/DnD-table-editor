@@ -13,8 +13,9 @@ class CharacterEditor extends Component {
       const colSpec = [
           {title: 'Tag', fieldName: 'tag', inputType: "TextField", width: 200},
           {title: 'Name', fieldName: 'name', inputType: "TextField", width: 200},
+          {title: 'Met', fieldName: 'met', inputType: "Toggle", width: 100},
           {title: 'Occupation', fieldName: 'occupation', inputType: "TextField", width: 300},
-          {title: 'Status', fieldName: 'status', inputType: "SelectField", selectOptions: ["alive", "dead", "unconscious"], width: 200, defaultValue: 'alive'},
+          {title: 'Status', fieldName: 'status', inputType: "SelectField", selectOptions: ["alive", "dead", "unconscious"], width: 100, defaultValue: 'alive'},
           {title: 'Information', fieldName: 'information', inputType: "TextField", width: 500}
       ];
 
@@ -24,7 +25,8 @@ class CharacterEditor extends Component {
       "name": "Toblin Stonehill",
       "occupation": "Innkeeper",
       "status": "alive",
-      "information": ["RedbrandHangout"]
+      "information": ["RedbrandHangout"],
+      "met": true
     
   },
   {
@@ -33,7 +35,8 @@ class CharacterEditor extends Component {
       "name": "Elmar Barthen",
       "occupation": "Owns trading post",
       "status": "alive",
-      "information": ["RedbrandShakedown"]
+      "information": ["RedbrandShakedown"],
+      "met": false
     
   },
   {
@@ -42,7 +45,8 @@ class CharacterEditor extends Component {
       "occupation": "Retired adventurer",
       "faction": "Order of the Gauntlet",
       "status": "alive",
-      "information": ["RedbrandHideoutLocation", "GetRidOfRedbrands", "DiggingOldOwlWell"]
+      "information": ["RedbrandHideoutLocation", "GetRidOfRedbrands", "DiggingOldOwlWell"],
+      "met": false
     
   },
   {
@@ -50,7 +54,8 @@ class CharacterEditor extends Component {
       "name": "Linene Graywind",
       "occupation": "Runs trading post",
       "status": "alive",
-      "information": []
+      "information": [],
+      "met": false
     
   }, 
   {
@@ -59,7 +64,8 @@ class CharacterEditor extends Component {
       "occupation": "Runs Phandalin Miner's Exchange",
       "faction": "Zhentarim",
       "status": "alive",
-      "information": ["GoblinCragmawCastle", "KillRedbrandLeader"]
+      "information": ["GoblinCragmawCastle", "KillRedbrandLeader"],
+      "met": false
     
   },  
   {
@@ -69,7 +75,8 @@ class CharacterEditor extends Component {
       "status": "alive",
       "information": ["ReidothLocation"], 
       "familyOf": "Mother of Carp",
-      "friendOf": "Reidoth"
+      "friendOf": "Reidoth",
+      "met": false
     
   },  
   {
@@ -78,7 +85,8 @@ class CharacterEditor extends Component {
       "occupation": "Elf cleric of Tymora",
       "faction": "Harper",
       "status": "alive",
-      "information": ["AskAgathaAboutBook"]
+      "information": ["AskAgathaAboutBook"],
+      "met": false
     
   },  
   {
@@ -86,7 +94,8 @@ class CharacterEditor extends Component {
     "name": "Harbin Wester",
     "occupation": "Townmaster of Phandalin",
     "status": "alive",
-    "information": ["OrcsTriboarTrail", "TownmasterAndRedbrands"]
+    "information": ["OrcsTriboarTrail", "TownmasterAndRedbrands"],
+    "met": false
     
   },  
   {
@@ -94,7 +103,8 @@ class CharacterEditor extends Component {
     "name": "Sildar Hallwinter",
     "faction": "Lords' Alliance",
     "status": "alive",
-    "information": ["MissingIarno"]
+    "information": ["MissingIarno"],
+    "met": true
     
   }, 
   {
@@ -102,7 +112,8 @@ class CharacterEditor extends Component {
     "name": "Narth",
     "occupation": "Farmer",
     "status": "alive",
-    "information": ["SisterGaraeleExhausted"]
+    "information": ["SisterGaraeleExhausted"],
+    "met": false
     
   },
   {
@@ -110,28 +121,32 @@ class CharacterEditor extends Component {
     "name": "The Redbrands",
     "faction": "Redbrands",
     "status": "alive",
-    "information": []
+    "information": [],
+    "met": false
     
   },
   {
    "tag": "Elsa",
     "name": "Elsa",
     "status": "alive",
-    "information": []
+    "information": [],
+    "met": false
     
   },
   {
    "tag": "Lanar",
     "name": "Lanar",
     "status": "alive",
-    "information": ["OrcsTriboarTrail"]
+    "information": ["OrcsTriboarTrail"],
+    "met": false
     
   },
   {
    "tag": "Trilena",
     "name": "Trilena",
     "status": "alive",
-    "information": ["DendrarFamilyKidnapped"]
+    "information": ["DendrarFamilyKidnapped"],
+    "met": false
     
   },
   {
@@ -139,35 +154,40 @@ class CharacterEditor extends Component {
     "name": "Pip",
     "status": "alive",
     "information": ["SecretTunnelKnowledge"], 
-    "friendOf": "Carp"
+    "friendOf": "Carp",
+    "met": false
     
   },
   {
    "tag": "Freda",
     "name": "Freda",
     "status": "alive",
-    "information": ["RedbrandsAndHalia"]
+    "information": ["RedbrandsAndHalia"],
+    "met": false
     
   },
   {
    "tag": "Ander",
     "name": "Ander",
     "status": "alive",
-    "information": []
+    "information": [],
+    "met": false
     
   },
   {
    "tag": "Thistle",
     "name": "Thistle",
     "status": "alive",
-    "information": []
+    "information": [],
+    "met": false
     
   },
   {
    "tag": "Grista",
     "name": "Grista",
     "status": "alive",
-    "information": []
+    "information": [],
+    "met": false
     
   },
   {
@@ -175,42 +195,48 @@ class CharacterEditor extends Component {
     "name": "Carp",
     "status": "alive",
     "information": ["RedbrandHideoutLocation", "SecretTunnelLocation"],
-    "familyOf": "Child of Qelline Alderleaf"
+    "familyOf": "Child of Qelline Alderleaf",
+    "met": false
     
   },
   {
    "tag": "Agatha",
     "name": "Agatha the Banshee",
     "status": "alive",
-    "information": ["AgathaInfo"]
+    "information": ["AgathaInfo"],
+    "met": false
     
   },
   {
    "tag": "Reidoth",
     "name": "Reidoth",
     "status": "alive",
-    "information": ["GreenDragon"]
+    "information": ["GreenDragon"],
+    "met": false
     
   },
   {
    "tag": "GundrenRockseeker",
     "name": "Gundren Rockseeker",
     "status": "alive",
-    "information": ["WaveEchoCaveMap"]
+    "information": ["WaveEchoCaveMap"],
+    "met": false
     
   },
   {
    "tag": "Hamun",
     "name": "Hamun the Necromancer",
     "status": "alive",
-    "information": ["HamunQuest", "FinishHamunQuest"]
+    "information": ["HamunQuest", "FinishHamunQuest"],
+    "met": false
     
   },
   {
    "tag": "RedbrandMinions",
     "name": "Goblin Droop and Bugbears",
     "status": "alive",
-    "information": ["RedbrandMinionInfo"]
+    "information": ["RedbrandMinionInfo"],
+    "met": false
     
   }
       ];
